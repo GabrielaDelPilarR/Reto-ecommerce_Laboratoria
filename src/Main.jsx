@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { getData } from "./components/services"
+import { Header } from "./components/Header"
 
 function Main() {
     const [data , setData]= useState([])
@@ -11,6 +12,10 @@ function Main() {
     console.log(data)
 
     return (
+        <>
+        <div>
+         <Header />
+         </div>
         <div>
            {data.map((e)=>(
             <div>
@@ -21,6 +26,7 @@ function Main() {
            ))}
          
         </div>
+        </>
     )
 }
 
