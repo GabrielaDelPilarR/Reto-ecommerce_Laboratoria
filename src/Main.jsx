@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { getData } from "./components/services"
+import ProductDetail from "./productDetail/ProductDetail"
 
 function Main() {
     const [data , setData]= useState([])
@@ -8,7 +9,7 @@ function Main() {
         getData.then(res=>setData(res.products)).catch(e=>console.log(e))
     },[data])
     
-    console.log(data)
+    // console.log(data)
 
     return (
         <div>
@@ -19,6 +20,8 @@ function Main() {
             <p>{e.description}</p>
             </div>
            ))}
+
+           <ProductDetail product={data[0]}/>
          
         </div>
     )
