@@ -3,10 +3,10 @@ import carrito from "../image/carrito.png"
 
 export const Header =() => {
 return(  <>
-<nav class="navbar navbar-expand-lg bg-light">
-  <div class="container-fluid">
+<nav className="navbar navbar-expand-lg bg-light">
+  <div className="container-fluid">
   <img src={carrito} width="50" alt="carro de compras"  />
-    <a class="navbar-brand" href="#">MyShop</a>
+    <a className="navbar-brand">MyShop</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
