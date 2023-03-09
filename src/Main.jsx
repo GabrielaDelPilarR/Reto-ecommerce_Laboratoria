@@ -1,7 +1,11 @@
 import { useEffect, useState } from "react"
 import { getData } from "./components/services"
+
+import ProductDetail from "./productDetail/ProductDetail"
+
 import './main-styles.css'
 import ShowList from "./components/ShowList"
+
 
 function Main() {
     const [data , setData]= useState([])
@@ -10,7 +14,7 @@ function Main() {
         getData.then(res=>setData(res.products)).catch(e=>console.log(e))
     },[data])
     
-    console.log(data)
+    // console.log(data)
 
     return (
         <>
@@ -49,6 +53,10 @@ function Main() {
                 ))}
 
             </div>
+           ))}
+
+           <ProductDetail product={data[0]}/>
+
          
         </div>
             
