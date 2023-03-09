@@ -10,7 +10,7 @@ import ShowList from "./components/ShowList"
 
 function Main() {
     const [data , setData]= useState([])
-    const [modal , setModal] = useState(false)
+   // const [modal , setModal] = useState(false)
 
     useEffect(()=>{
         getData.then(res=>setData(res.products)).catch(e=>console.log(e))
@@ -30,7 +30,7 @@ function Main() {
                 {data.map((e)=>(
                     <>
                     <div className="card-products" id={e.id}>
-                    <button class="dcto2" onClick={()=> {setModal(true)}}>
+                    <button class="dcto2" >
                             <span className="descuento">32%</span>
                             dto.
                     </button>
@@ -60,18 +60,18 @@ function Main() {
             </div>
          
 
-           <ProductDetail 
+           {/* <ProductDetail 
            products={data}
            state = {modal}
            onChangeState = {setModal}
-           />
+           /> */}
 
          
         </div>
   
-          <div>
+          {/* <div>
           <ShowList products={data}/>
-          </div>
+          </div> */}
 
         </>
     )
