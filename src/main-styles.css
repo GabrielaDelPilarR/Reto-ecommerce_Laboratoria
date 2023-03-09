@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+}
+
+.container-products{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.card-products{
+    
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    width: 410px;
+    
+}
+
+.img-product{
+    margin: auto;
+    width: 200px;
+    height: 200px;
+}
+
+.product-name{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.title{
+    font-size: 18px;
+    color:#231f1e ;
+    font-weight: 700;
+}
+
+.description{
+    font-size: 12px;
+}
+
+.container-img{
+    display: flex;
+    justify-content: center;
+    border-radius: 1rem;
+    background-color: #f5f6f6;
+}
+
+button{
+    display: flex;
+    border: 1px solid #231f1e;
+    font-size: 14px;
+    padding-block: 1rem ;
+    padding-inline: 2rem;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+.dcto2 {
+    display: flex;
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 1rem;
+    color: #5E18BB;
+    background: #F0E3FE;
+    border-radius: 16px;
+    padding: 4px;
+    gap:0.25rem;
+    width: 70px;
+    height: 25px;
+    border: none;
+}
+.descuento{
+    color: #5E18BB;
+}
+
+button:hover{
+    background-color: #003d29;
+    color: white;
+}
+
+span{
+    color: #0AC763;
+    font-weight: bolder;
+}
