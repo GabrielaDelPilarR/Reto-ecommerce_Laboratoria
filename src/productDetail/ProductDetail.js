@@ -1,9 +1,14 @@
-export default function ProductDetail({ product }) {
+export default function ProductDetail({ products, state, onChangeState }) {
+  console.log(products)
   return (
     <>
+      {state && (
+        products.map((product)=>(
+          <>
+
       <h3>{product.title}</h3>
         <div>
-          <img src={ product.images[0] } alt={ product.title }></img>
+          <img src={ product.images} alt={ product.title }></img>
         </div>
       <p>Precio: $ {product.price}</p>
       <div>
@@ -12,6 +17,11 @@ export default function ProductDetail({ product }) {
         <p>Puntuación: {product.rating}</p>
         <p>Categoria: {product.category}</p>
       </div>
+
+          </>
+
+        ))
+      )}
     </>
   );
 }
