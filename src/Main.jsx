@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { getData } from "./components/services"
+import './main-styles.css'
 
 function Main() {
     const [data , setData]= useState([])
@@ -12,13 +13,39 @@ function Main() {
 
     return (
         <div>
-           {data.map((e)=>(
-            <div>
-            <h1>{e.title}</h1>
-            <img src={e.images[0]} alt={e.title}></img>
-            <p>{e.description}</p>
+                <h2>Products</h2>
+            <div className="container-products">
+                {data.map((e)=>(
+                    <>
+                    <div className="card-products">
+                    <button class="dcto2">
+                            <span className="descuento">32%</span>
+                            dto.
+                    </button>
+                        <div className="container-img">
+                    <img src={e.images[0]} className="img-product" alt={e.title}></img>
+
+                        </div>
+                    <div className="product-name">
+                        <h4 className="title">{e.title}</h4>
+                        <span className="title">
+                            <span>
+                            s./ 
+                            </span>
+                            
+                            {e.price}</span>
+
+                    </div>
+                    <p className="description">{e.description}</p>
+                    <button>
+                        Add products
+                    </button>
+                    </div>
+                    
+                    </>
+                ))}
+
             </div>
-           ))}
          
         </div>
     )
