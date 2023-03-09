@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { getData } from "./components/services"
+import { Header } from "./components/Header"
 
 import ProductDetail from "./productDetail/ProductDetail"
 
@@ -18,6 +19,9 @@ function Main() {
 
     return (
         <>
+        <div>
+         <Header />
+         </div>
 
         <div>
                 <h2>Products</h2>
@@ -59,12 +63,11 @@ function Main() {
 
          
         </div>
-            
+  
           <div>
           <ShowList products={data}/>
           </div>
-           
-         
+
         </>
     )
 }
