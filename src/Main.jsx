@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { getData } from "./components/services"
 import './main-styles.css'
+import ShowList from "./components/ShowList"
 
 function Main() {
     const [data , setData]= useState([])
@@ -12,6 +13,8 @@ function Main() {
     console.log(data)
 
     return (
+        <>
+
         <div>
                 <h2>Products</h2>
             <div className="container-products">
@@ -48,6 +51,13 @@ function Main() {
             </div>
          
         </div>
+            
+          <div>
+          <ShowList products={data}/>
+          </div>
+           
+         
+        </>
     )
 }
 
